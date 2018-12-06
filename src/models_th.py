@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 """
+
+this model is loaded from the file train_demo.py
+
 Created on Wed Jul 19 17:38:32 2017
 
 @author: yue_wu
@@ -12,6 +15,10 @@ import keras
 #assert keras.__version__ == '1.1.0', "ERROR: keras version MUST be 1.1.0"
 import numpy as np
 from keras import backend as K
+
+'''
+    what if I have tensorflow backend??
+'''
 from theano import tensor
 from keras.models import Sequential, Model
 from keras.layers.core import Dense, Dropout, Activation, Permute, Reshape
@@ -23,6 +30,11 @@ from keras.utils.np_utils import convert_kernel
 #--------------------------------------------------------------------------------
 # Customized Softmax Function along the filter dimension
 #--------------------------------------------------------------------------------
+
+'''
+    what is 4d tensor??
+'''
+
 def softmax4(x):
     """Custom softmax activation function for a 4D input tensor
     softmax along axis = 1
@@ -45,8 +57,11 @@ def softmax4(x):
 #--------------------------------------------------------------------------------
 # PPT Model Definition - single resolution
 #--------------------------------------------------------------------------------
+
 def create_single_res_model() :
-    '''Create a PPT text detector model with single resolution support
+    '''
+    what is single resoution supprt
+    Create a PPT text detector model with single resolution support
     '''
     model = Sequential()
     # block 1
