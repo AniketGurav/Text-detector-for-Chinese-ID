@@ -150,7 +150,11 @@ def tf2th(model):
             converted_w = original_w.transpose(0,1,3,2)  
             K.set_value(layer.W, converted_w)  
     return model  
-  
+
+
+'''
+    what is m if tensorflow backend
+'''
 def conv_layer_converted(model,th_weights, tf_weights, m = 1):  
     """ 
     :param tf_weights: 
@@ -168,9 +172,9 @@ def conv_layer_converted(model,th_weights, tf_weights, m = 1):
         print("0-tf2th, 1-th2tf")  
         return 
 
-
-
-
+'''
+    where is this 2nd model is used ???
+'''
 def create_multi_res_model() :
     '''Create a PPT text detector model using multi-resolution responses
     '''
@@ -205,6 +209,7 @@ def create_multi_res_model() :
 
 def cross_entropy( true_dist, coding_dist ) :
     return -tensor.sum(true_dist * tensor.log(coding_dist), axis=1 )
+
 def create_model( ) :
     # Define CNN model
     model = Sequential()
