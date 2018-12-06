@@ -172,6 +172,11 @@ if __name__ == '__main__' :
     # text detection for all images
     #----------------------------------------------------------------------------
     all_luts = []
+    
+    '''
+        As per my understanding this function takes output segment images and apply average filter on them
+    '''
+    
     for image_file in input_files :
         res_map = safe_decoder( text_detector, image_file, res_type )
         if ( res_map is not None ) :
